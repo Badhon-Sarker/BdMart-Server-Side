@@ -12,6 +12,7 @@ app.use(cors({
     origin: [
         'http://localhost:5173',
         'http://localhost:5174',
+        'https://bdmart-6569d.web.app'
         
         
       ],
