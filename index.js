@@ -51,7 +51,19 @@ async function run() {
         res.send(result)
     })
 
-    // done today
+
+    app.get('/Search', async(req, res)=>{
+        const search = req.query.search
+        
+      
+        let query = {
+            product_name: { $regex: search, $options: 'i'}
+        }
+        const result = await productsCollection.find(query).toArray()
+        res.send(result)
+      })
+
+    
 
 
 
